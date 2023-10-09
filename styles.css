@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: all .3s ease;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-menu {
+    width: 18%;
+    border-right: 1px solid rgb(69, 77, 95);
+}
+
+.logo-container {
+    display: flex;
+    margin: 20px 20px 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+}
+
+.logo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 800;
+    color: rgb(106, 116, 138);
+}
+
+.collapse {
+    /* border: 1px solid gray; */
+    padding: 5px;
+}
+
+.avatar-container {
+    margin: 20px 20px 0 20px;
+    display: flex;
+    gap: 10px;
+    /* justify-content: space-between; */
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.greating h3 {
+    text-transform: capitalize;
+    font-size: 14px;
+    color: gray;
+    font-weight: 400;
+}
+
+.greating>div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+nav,
+.settings-con {
+    margin: 20px 20px 0 20px;
+}
+
+.nav-container {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav li,
+.settings-con li {
+    /* */
+    /* padding: 80px 5px; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    color: rgb(69, 77, 95);
+    font-weight: 700;
+    padding: 0 10px;
+    height: 50px;
+    /* padding: 10px; */
+    margin-top: 5px;
+}
+
+ul li:hover,
+ul li.active {
+    /* border: 1px solid gray; */
+    background-color: rgb(220, 215, 252);
+    color: rgb(82, 45, 177);
+}
+
+nav li div,
+.settings-con li div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav li .new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(214, 121, 117);
+    color: white;
+    font-weight: 600;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+
+/* rhs */
+
+.rhs {
+    width: 22%;
+    margin: 20px 20px 0 20px;
+}
+
+.friends-header,
+.notification-header,
+.birthday-header {
+    text-transform: capitalize;
+    align-items: flex-end;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.friends-header h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.friends,
+.notification {
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+
+.frnd,
+.birthday-container {
+    margin-top: 10px;
+}
+
+.frnd-intro,
+.birthday-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.frnd-intro>div,
+.birthday-container>div {
+    display: flex;
+    gap: 15px;
+}
+
+.frnd-img-con,
+.birthday-img-con {
+    overflow: hidden;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(69, 77, 95);
+}
+
+.frnd-name,
+.birthday-name {
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+.frnd-job,
+.birthday-job {
+    margin-top: 5px;
+    font-size: 15px;
+    color: rgb(106, 116, 138);
+    font-weight: 400;
+}
+
+.likes-con {
+    display: flex;
+    gap: 30px;
+    margin-top: 5px;
+}
+
+.likes-con span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: rgb(220, 215, 252);
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.notification-content>div>h3 {
+    font-size: 16px;
+}
+
+.notification-content>div>span {
+    color: rgb(106, 116, 138);
+    font-size: 18px;
+}
+
+.details-btn {
+    padding: 5px 10px;
+    background-color: rgb(220, 215, 252);
+    color: rgb(113, 70, 231);
+    border-radius: 4px;
+}
+
+
+/* main */
+
+main {
+    width: 63%;
+    overflow-y: scroll;
+    margin: 0 20px;
+    padding: 10px;
+}
+
+.mobile {
+    display: none;
+}
+
+.main-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: flex-end;
+}
+
+.employees-con {
+    display: flex;
+    gap: 10px;
+}
+
+.employees-con span,
+.update span {
+    height: 40px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(106, 116, 138);
+    border-radius: 5px;
+}
+
+main h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+main h5 {
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(106, 116, 138);
+}
+
+.searchbox {
+    margin-top: 20px;
+    border: 1px solid rgb(106, 116, 138);
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchbox input {
+    border: none;
+    width: 96%;
+    /* padding: 2px; */
+    outline: none;
+}
+
+.textarea-container {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: rgb(249, 250, 252);
+    border-radius: 5px;
+}
+
+.textarea-container textarea {
+    resize: none;
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons-container .icons {
+    display: flex;
+    gap: 10px;
+}
+
+.send-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(220, 215, 252);
+}
+
+.friend-update-container {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: rgb(249, 250, 252); */
+    border-radius: 5px;
+}
+
+.friend-update {
+    width: 100%;
+    border-bottom: 1px solid rgb(106, 116, 138);
+    padding-bottom: 20px;
+}
+
+.friend-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 20px; */
+}
+
+.dot-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.span-con {
+    gap: 3px;
+}
+
+.friendname {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dot-con {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgb(106, 116, 138);
+}
+
+.update {
+    width: 100%;
+    padding-left: 55px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.update p {
+    margin: 20px 0;
+}
+
+.location {
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid rgb(106, 116, 138);
+}
+
+.location h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+}
+
+.location-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.location-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.update-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.update-icons .likes-con {
+    gap: 20px;
+}
+
+.update-icons .likes-con span {
+    display: flex;
+    width: unset;
+    border-radius: 20px;
+    background-color: rgb(220, 215, 252);
+}
+
+
+/* collapsed side bar */
+
+.collapsed .hide {
+    display: none;
+}
+
+.collapsed li {
+    justify-content: center;
+}
+
+.collapsed .logo-container {
+    border-bottom: none;
+    justify-content: center;
+    padding-bottom: 0;
+}
+
+.collapsed .collapse {
+    transform: rotate(180deg);
+}
+
+.collapsed {
+    width: unset;
+}
+
+@media (max-width:450px) {
+    main {
+        width: 100%;
+        margin: 0;
+        padding: 5px;
+    }
+    .side-menu,
+    .rhs {
+        position: absolute;
+        z-index: 10;
+    }
+    .side-menu {
+        left: -100%;
+        margin-top: 30px;
+    }
+    .rhs {
+        right: -100%;
+    }
+    .frnd-img-con {
+        width: 30px;
+        height: 30px;
+    }
+    .update {
+        padding-left: 20px;
+    }
+    .location {
+        width: 95%;
+    }
+    p {
+        font-size: 14px;
+    }
+    .mobile {
+        display: block;
+    }
+    .opened {
+        left: 0;
+        background-color: white;
+        width: unset;
+        height: 100%;
+    }
+    .nav-opener,
+    .notifications-opener {
+        z-index: 20;
+    }
+    .opened .collapse {
+        display: none;
+    }
+    .opened-rhs {
+        right: 0;
+        background-color: white;
+        width: unset;
+        height: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+    .rhs h3 {
+        font-size: 14px;
+    }
+    .rhs h4 {
+        font-size: 14px;
+    }
+    .notification-content>div>h3 {
+        font-size: 14px;
+    }
+    .notification-content>div>span {
+        font-size: 12px;
+    }
+}
