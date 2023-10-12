@@ -7,14 +7,21 @@ collapsebtn.addEventListener("click", () => {
 
 })
 
-let mobileNav = document.querySelector(".nav-opener");
+let mobileNavOpener = document.querySelector(".nav-opener");
+let mobileNavCloser = document.querySelector(".nav-closer");
 let mobileNot = document.querySelector(".notifications-opener");
 
-mobileNav.addEventListener("click", () => {
-    sidebar.classList.toggle("opened")
-    sidebar.classList.toggle("collapsed")
+mobileNavOpener.addEventListener("click", () => {
+    sidebar.classList.add("opened")
+    mobileNavOpener.style.display = 'none'
+    mobileNavCloser.style.display = 'block'
+})
 
-
+mobileNavCloser.addEventListener("click", () => {
+    // sidebar.classList.toggle("opened")
+    mobileNavOpener.style.display = 'block'
+    mobileNavCloser.style.display = 'none'
+    sidebar.classList.remove("opened")
 })
 
 mobileNot.addEventListener("click", () => {

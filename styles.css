@@ -527,7 +527,8 @@ main h5 {
     p {
         font-size: 14px;
     }
-    .mobile {
+    .nav-opener,
+    .notifications-opener {
         display: block;
     }
     .opened {
@@ -537,12 +538,14 @@ main h5 {
         height: 100%;
     }
     .nav-opener,
-    .notifications-opener {
+    .nav-closer,
+    .notifications-opener,
+    .notifications-closer {
         z-index: 20;
     }
-    .opened .collapse {
+    /* .opened .collapse {
         display: none;
-    }
+    } */
     .opened-rhs {
         right: 0;
         background-color: white;
